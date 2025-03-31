@@ -83,6 +83,23 @@ To learn more about using or developing Autoware, refer to the [Autoware documen
   - Documentation repository for Autoware users and developers.
   - Since Autoware Core/Universe has multiple repositories, a central documentation repository is important to make information accessible from a single place.
 
+## Using Agnocast
+
+To build/run with Agnocast Enabled, please do the following:
+
+- When building, set the environment variable ENABLE_AGNOCAST to 1 (or specify -DUSE_AGNOCAST=ON in the build options)
+- When running, set the environment variable ENABLE_AGNOCAST to 1
+
+Conversely, to build/run with Agnocast Disabled, please do the following:
+
+- When building, set the environment variable ENABLE_AGNOCAST to something other than 1 or leave it undefined (or specify -DUSE_AGNOCAST=OFF in the build options)
+- When running, set the environment variable ENABLE_AGNOCAST to something other than 1 or leave it undefined
+
+Also, communication using agnocast requires specifying libagnocast_heapphook.so in LD_PRELOAD, which by default refers to /opt/ros/humble/lib/libagnocast_heaphook.so (placed by apt install).
+
+The following is for developers:
+If you want to specify a locally built libagnocast_heapphook.so, set the environment variable AGNOCAST_HEAPHOOK_PATH to its full path.
+
 ## Using Autoware.AI
 
 If you wish to use Autoware.AI, the previous version of Autoware based on ROS 1, switch to [autoware-ai](https://github.com/autowarefoundation/autoware_ai) repository. However, be aware that Autoware.AI has reached the end-of-life as of 2022, and we strongly recommend transitioning to Autoware Core/Universe for future use.
