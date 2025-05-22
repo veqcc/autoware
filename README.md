@@ -95,7 +95,7 @@ Conversely, to build/run with Agnocast Disabled, please do the following:
 - When building, set the environment variable ENABLE_AGNOCAST to something other than 1 or leave it undefined (or specify -DUSE_AGNOCAST=OFF in the build options)
 - When running, set the environment variable ENABLE_AGNOCAST to something other than 1 or leave it undefined
 
-Also, communication using agnocast requires specifying libagnocast_heapphook.so in LD_PRELOAD, which by default refers to /opt/ros/humble/lib/libagnocast_heaphook.so (placed by apt install).
+Also, communication using agnocast requires specifying libagnocast_heaphook.so in LD_PRELOAD, which by default refers to /opt/ros/humble/lib/libagnocast_heaphook.so (placed by apt install).
 
 The following is for developers:
 If you want to specify a locally built libagnocast_heapphook.so, set the environment variable AGNOCAST_HEAPHOOK_PATH to its full path.
